@@ -1,0 +1,325 @@
+<?php?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>M1 Final Front Pages</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+	
+	<style>
+		/*
+		#993B58 -> magenta
+		#FDE8E9 -> misty rose light pink
+		#E3BAC6 -> fairy tail pink
+		#36558F -> darker blue
+		#3F88C5 -> lighter blue
+		#7B2424 -> wine red
+
+		*/
+		body {
+			margin: 0px;
+            background-color: #E3BAC6;
+		}
+		h1 {
+			margin: 0px;
+            font-size: 5em;
+            color: #E3BAC6;
+			padding-bottom: 20px;
+			padding-top: 100px;
+			text-align: center;
+			text-shadow: 0px 0px 50px #ecf3ff;
+            text-decoration: underline #36558F;
+		}
+		h2 {
+			color: #993B58;
+			text-align: center;
+			font-size: 3em;
+		}
+
+        h3 {
+			color: #7d3e52;
+		}
+
+		#header {
+			/* background-image: url(img/confetti.jpg); */
+			background: rgb(54,85,143);
+			background: linear-gradient(0deg, rgba(54,85,143,1) 0%, rgba(63,136,197,1) 100%);
+			height: 500px;
+			
+			background-size: cover;
+			background-position: center;
+			
+		}
+
+		#header-info{
+			padding-top: 20px;
+			margin: 0px;
+            font-size: 3em;
+            color: #FDE8E9;
+			text-align: center;
+			line-height: 100%;
+            vertical-align: text-top;
+		}
+
+		#arrow{
+            font-size: 3em;
+            color: #FDE8E9;
+			
+            bottom: 0px;
+			position: absolute;
+
+			text-align: center;
+		}
+
+		#main {
+			margin-left: auto;
+			margin-right: auto;
+			background-color: #E3BAC6;
+			padding-bottom: 636px;
+			position: relative;
+
+		}
+		#footer {
+			background-image: url(img/footer.png);
+			/* background-size: cover; */
+			width:100%;
+			line-height: 636px;
+			text-align: center;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+
+			position: absolute;
+			bottom:0;
+			left:0;
+        }
+
+		.logo{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+            border: 2px solid #491c2b;
+		}
+
+        #navbar li{
+            width: 25%;
+			padding: 10px;
+			font-size: 1.5em;
+        }
+
+        #navbar li a{
+            display: block;
+            color: white;
+            text-align: center;
+        }
+        #navbar li:hover {
+            background-color: #ffffff20;
+        }
+
+        #navbar ul{
+            list-style-type: none;
+            display: flex;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.27);
+
+        }
+
+
+        
+
+
+
+		/* Default CSS for extra small devices */
+
+		/* Small Devices Mobile*/
+		@media ( min-width: 576px ) {
+	
+		}
+
+		/* Medium Devices Tablet*/
+		@media ( min-width: 768px ) {
+
+		
+		}
+
+		/* Large Devices Desktop*/
+		@media ( min-width: 992px ) {
+
+
+			#logo{
+				width: 40%; 
+				float: right;
+				margin-left: 15px;
+				margin-bottom: 15px;
+			}
+		}
+
+
+	</style>
+
+  </head>
+  <body>
+
+
+		<div  id="header">
+
+            <?php include "nav.php"; ?>
+			
+			<div class="row">
+				
+				<h1>Playlist</h1>
+				<div id="header-info">
+					
+					
+				</div>
+
+				<div id="arrow">
+					<p>v</p>
+				</div>
+				
+			</div>
+			
+
+		</div> <!-- #header -->
+	
+	<div class="container-fluid" id="wrapper">
+		<div class = "row no-gutters">
+			<div class = "col-12 border border-dark" id = "main">
+
+				<div class="container">
+					<div class="row">
+						<h2 class="col-12 mt-4 mb-4">Add Songs To Playlist!</h2>
+					</div> <!-- .row -->
+				</div> <!-- .container -->
+				
+				<div class="container ">
+					<form id="songForm">
+						<div class="form-row">
+							<div class="form-group col-5">
+								<label for="songName">Song Name</label>
+								<input type="text" class="form-control" id="songName" placeholder="Enter song name">
+							</div>
+							<div class="form-group col-5">
+								<label for="artistName">Artist Name</label>
+								<input type="text" class="form-control" id="artistName" placeholder="Enter artist name">
+							</div>
+						</div>
+						<button type="submit" class="btn btn-primary">Add Song</button>
+					</form>
+					<table class="table mt-3">
+						<thead>
+							<tr>
+								<th>Song Name</th>
+								<th>Artist Name</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody id="songList">
+			
+						</tbody>
+					</table>
+				</div>
+
+				<div id="footer">
+					.
+				</div> <!-- #header -->
+
+			</div>
+
+			
+			  
+		</div>
+	</div>
+
+
+		
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	
+	<!-- Popper and Bootstrap JS Below -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+	<script>
+        //store songs in local storage
+        let songs = JSON.parse(localStorage.getItem('songs')) || [];
+
+        //eender existing songs from local storage
+        loadSongs();
+
+		//add event listener to form submit
+	document.getElementById('songForm').addEventListener('submit', function (e) 
+	{
+    e.preventDefault();
+
+    //get input values
+    let songName = document.getElementById('songName').value;
+    let artistName = document.getElementById('artistName').value;
+
+    //add song to songs array
+    songs.push({
+        songName: songName,
+        artistName: artistName
+    });
+
+    //store updated songs array in local storage
+    localStorage.setItem('songs', JSON.stringify(songs));
+
+    //render songs in table
+    loadSongs();
+
+    //clear form inputs
+    document.getElementById('songForm').reset();
+});
+
+
+function loadSongs() {
+    let songList = document.getElementById('songList');
+    songList.innerHTML = '';
+
+    //loop through songs array and create table rows
+    for (let i = 0; i < songs.length; i++) {
+        let row = document.createElement('tr');
+        let songNameCol = document.createElement('td');
+        let artistNameCol = document.createElement('td');
+        let actionCol = document.createElement('td');
+
+        songNameCol.textContent = songs[i].songName;
+        artistNameCol.textContent = songs[i].artistName;
+
+        //create delete button
+        let deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.classList.add('btn', 'btn-danger', 'btn-sm');
+        deleteBtn.addEventListener('click', function () {
+            //remove song from songs array
+            songs.splice(i, 1);
+
+            //store updated songs array in local storage
+            localStorage.setItem('songs', JSON.stringify(songs));
+
+            //load songs in table
+            loadSongs();
+        });
+
+        actionCol.appendChild(deleteBtn);
+
+        row.appendChild(songNameCol);
+        row.appendChild(artistNameCol);
+        row.appendChild(actionCol);
+
+        songList.appendChild(row);
+    }
+}
+
+//call the loadSongs function to initially render songs from local storage
+loadSongs();
+
+	</script>
+  </body>
+</html>
